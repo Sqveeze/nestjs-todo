@@ -3,7 +3,6 @@ import { Controller, Post, Body, HttpException, HttpStatus } from '@nestjs/commo
 import { ValidationService } from '../validation/validation.service';
 import { AuthService } from './auth.service';
 import { IAuthSignUp, IAuthSignIn, IAuthResult } from '../common/types';
-import { AuthGuard } from '../auth.guard';
 
 @Controller('auth')
 export class AuthController {
