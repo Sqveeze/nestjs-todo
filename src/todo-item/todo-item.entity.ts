@@ -12,6 +12,7 @@ export class TodoItem {
   })
   text: string;
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   @ManyToOne(type => Todo, todo => todo.items)
   todo?: Todo;
 }
