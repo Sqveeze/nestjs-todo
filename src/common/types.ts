@@ -22,10 +22,12 @@ export interface IUser {
 export interface ITodo {
   title: string;
   text: string;
+  id?: number;
   userId?: number;
 }
 
 export interface ITodoItem {
   text: string;
   todoId?: number;
+  itemId?: number;
 }
