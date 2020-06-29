@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany, JoinColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToMany } from 'typeorm';
 
 import { User } from '../user/user.entity';
 import { TodoItem } from '../todo-item/todo-item.entity';
@@ -14,9 +14,11 @@ export class Todo {
   @Column()
   text: string;
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   @ManyToOne(type => User)
   user?: User;
 
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   @OneToMany(type => TodoItem, todoItem => todoItem.todo)
   items?: TodoItem[];
 }
